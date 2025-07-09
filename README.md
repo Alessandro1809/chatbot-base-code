@@ -1,44 +1,94 @@
-<p align="center">
-  <a href="https://builderbot.vercel.app/">
-    <picture>
-      <img src="https://builderbot.vercel.app/assets/thumbnail-vector.png" height="80">
-    </picture>
-    <h2 align="center">BuilderBot</h2>
-  </a>
-</p>
+# 🍏 NutriBot - Asistente de Nutrición Inteligente
 
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/)
 
+Un chatbot de WhatsApp que utiliza inteligencia artificial para analizar imágenes y descripciones de comida, proporcionando información nutricional detallada, conteo de calorías y recomendaciones saludables.
 
-<p align="center">
-  <a aria-label="NPM version" href="https://www.npmjs.com/package/@builderbot/bot">
-    <img alt="" src="https://img.shields.io/npm/v/@builderbot/bot?color=%2300c200&label=%40bot-whatsapp">
-  </a>
-  <a aria-label="Join the community on GitHub" href="https://link.codigoencasa.com/DISCORD">
-    <img alt="" src="https://img.shields.io/discord/915193197645402142?logo=discord">
-  </a>
-</p>
+## 🌟 Características
 
+- 🖼️ **Análisis de imágenes de comida** usando visión por computadora
+- 📝 **Procesamiento de descripciones** de comidas en texto
+- 📊 **Información nutricional detallada** (calorías, macronutrientes)
+- 💡 **Recomendaciones personalizadas** para una alimentación saludable
+- 🤖 Fácil de usar a través de WhatsApp
 
-## Getting Started
+## 🚀 Requisitos previos
 
-With this library, you can build automated conversation flows agnostic to the WhatsApp provider, set up automated responses for frequently asked questions, receive and respond to messages automatically, and track interactions with customers. Additionally, you can easily set up triggers to expand functionalities limitlessly.
+- Node.js 18 o superior
+- Cuenta de OpenAI con acceso a la API
+- Número de teléfono para el bot de WhatsApp
+
+## ⚙️ Configuración
+
+1. Clona el repositorio:
+   ```bash
+   git clone [URL_DEL_REPOSITORIO]
+   cd base-ts-baileys-memory
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
+   ```env
+   OPENAI_API_KEY=tu_api_key_de_openai
+   PORT=3000
+   ```
+
+## 🏃‍♂️ Iniciar el bot
+
+1. Ejecuta el comando de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+2. Escanea el código QR que aparecerá en la consola con WhatsApp Web en tu teléfono.
+
+3. ¡Listo! El bot estará activo en tu WhatsApp.
+
+## 💬 Cómo usar
+
+1. **Para analizar una comida por texto**:
+   ```
+   Envía: "comida [descripción de tu comida]"
+   Ejemplo: "comida un plato de arroz con pollo y ensalada"
+   ```
+
+2. **Para analizar una imagen de comida**:
+   ```
+   Envía una imagen de tu comida con el pie de foto "analiza"
+   ```
+
+## 🛠️ Estructura del proyecto
 
 ```
-npm create builderbot@latest
+src/
+├── app.ts            # Punto de entrada de la aplicación
+├── services/
+│   └── openAI.ts    # Servicio de integración con OpenAI
+└── types/           # Tipos TypeScript
 ```
 
+## 📦 Dependencias principales
 
-## Documentation
+- `@builderbot/bot`: Framework para crear bots
+- `@builderbot/provider-baileys`: Proveedor de WhatsApp
+- `openai`: Cliente de la API de OpenAI
+- `typescript`: Tipado estático
+- `dotenv`: Manejo de variables de entorno
 
-Visit [builderbot](https://builderbot.vercel.app/) to view the full documentation.
+## 🤝 Contribuir
 
+Las contribuciones son bienvenidas. Por favor, envía un PR con tus mejoras.
 
-## Official Course
+## 📄 Licencia
 
-If you want to discover all the functions and features offered by the library you can take the course.
-[View Course](https://app.codigoencasa.com/courses/builderbot?refCode=LEIFER)
+Este proyecto está bajo la licencia [MIT](LICENSE).
 
+---
 
-## Contact Us
-- [💻 Discord](https://link.codigoencasa.com/DISCORD)
-- [👌 𝕏 (Twitter)](https://twitter.com/leifermendez)
+Hecho con ❤️ por [Tu Nombre]
